@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Sidebar from "@/components/sidebar";
 import { ReactNode } from "react";
@@ -9,12 +8,11 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
-    <main className="relative flex h-full w-full flex-auto">
+    <main className="flex flex-auto">
       <Sidebar />
-      <div className="flex w-full flex-col">
+      <div className="flex flex-1 flex-col ">
         <Header />
-        <div className="flex-1">{children}</div>
-        <Footer />
+        <div className="flex-1 p-6">{children}</div>
       </div>
     </main>
   );
